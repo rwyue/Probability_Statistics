@@ -1,6 +1,3 @@
-# Set the working directory
-setwd("C:/RWY/Edinburgh DSTI (24 - XX)/Probability and Statistics/Assessment")
-
 # Load necessary libraries
 library(readxl)  # reading excel spreadsheet
 library(dplyr)    
