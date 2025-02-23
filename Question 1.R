@@ -32,7 +32,7 @@ for (biomarker in biomarkers_list) {
   male_values <- merged_data %>% filter(Sex == 1) %>% pull(!!sym(biomarker))
   female_values <- merged_data %>% filter(Sex == 2) %>% pull(!!sym(biomarker))
   
-  # Perform independent t-test
+  # Perform independent t-test (Welch's t-test: unequal variance)
   t_test <- t.test(male_values, female_values, var.equal = FALSE)
   
   # Perform Mann-Whitney U test (Wilcoxon rank-sum test) if distribution is not normal
